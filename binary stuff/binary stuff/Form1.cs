@@ -12,8 +12,10 @@ namespace binary_stuff
 {
     public partial class Form1 : Form
     {
-        int total = 0;
+        int total1 = 0;
+        int total2 = 0;
         int[] bits = new int[8];
+        int[] bits2 = new int[8];
         public Form1()
         {
             InitializeComponent();
@@ -94,44 +96,150 @@ namespace binary_stuff
             {
                 bits[7] = 0;
             }
-            calc();
+            firstcalc();
         }
-        private void calc()
+        private void firstcalc()
         {
-            total = 0;
+            total1 = 0;
             if (bits[0] != 0)
             {
-                total += 1;
+                total1 += 1;
             }
             if (bits[1] != 0)
             {
-                total += 2;
+                total1 += 2;
             }
             if (bits[2] != 0)
             {
-                total += 4;
+                total1 += 4;
             }
             if (bits[3] != 0)
             {
-                total += 8;
+                total1 += 8;
             }
             if (bits[4] != 0)
             {
-                total += 16;
+                total1 += 16;
             }
             if (bits[5] != 0)
             {
-                total += 32;
+                total1 += 32;
             }
             if (bits[6] != 0)
             {
-                total += 64;
+                total1 += 64;
             }
             if (bits[7] != 0)
             {
-                total += 128;
+                total1 += 128;
             }
-            answertb.Text = total.ToString();
+            answertb.Text = total1.ToString();
+        }
+
+        private void b8_TextChanged(object sender, EventArgs e)
+        {
+            if (b1.Text == "1")
+            {
+                bits2[0] = 1;
+            }
+            else
+            {
+                bits2[0] = 0;
+            }
+            if (b2.Text == "1")
+            {
+                bits2[1] = 2;
+            }
+            else
+            {
+                bits2[1] = 0;
+            }
+            if (b3.Text == "1")
+            {
+                bits2[2] = 4;
+            }
+            else
+            {
+                bits2[2] = 0;
+            }
+            if (b4.Text == "1")
+            {
+                bits2[3] = 8;
+            }
+            else
+            {
+                bits2[3] = 0;
+            }
+            if (b5.Text == "1")
+            {
+                bits2[4] = 16;
+            }
+            else
+            {
+                bits2[4] = 0;
+            }
+            if (b6.Text == "1")
+            {
+                bits2[5] = 32;
+            }
+            else
+            {
+                bits2[5] = 0;
+            }
+            if (b7.Text == "1")
+            {
+                bits2[6] = 64;
+            }
+            else
+            {
+                bits2[6] = 0;
+            }
+            if (b8.Text == "1")
+            {
+                bits2[7] = 128;
+            }
+            else
+            {
+                bits2[7] = 0;
+            }
+            secondcalc();
+        }
+        private void secondcalc()
+        {
+            total2 = 0;
+            if (bits2[0] != 0)
+            {
+                total2 += 1;
+            }
+            if (bits2[1] != 0)
+            {
+                total2 += 2;
+            }
+            if (bits2[2] != 0)
+            {
+                total2 += 4;
+            }
+            if (bits2[3] != 0)
+            {
+                total2 += 8;
+            }
+            if (bits2[4] != 0)
+            {
+                total2 += 16;
+            }
+            if (bits2[5] != 0)
+            {
+                total2 += 32;
+            }
+            if (bits2[6] != 0)
+            {
+                total2 += 64;
+            }
+            if (bits2[7] != 0)
+            {
+                total2 += 128;
+            }
+            total2tb.Text = total2.ToString();
         }
     }
 }
