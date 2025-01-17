@@ -59,6 +59,9 @@
             this.bi2 = new System.Windows.Forms.TextBox();
             this.bi5 = new System.Windows.Forms.TextBox();
             this.clearbutton = new System.Windows.Forms.Button();
+            this.shiftrightbutton = new System.Windows.Forms.Button();
+            this.shiftleftbutton = new System.Windows.Forms.Button();
+            this.resetbutton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // bit5
@@ -400,11 +403,44 @@
             this.clearbutton.UseVisualStyleBackColor = true;
             this.clearbutton.Click += new System.EventHandler(this.clearbutton_Click);
             // 
+            // shiftrightbutton
+            // 
+            this.shiftrightbutton.Location = new System.Drawing.Point(69, 135);
+            this.shiftrightbutton.Name = "shiftrightbutton";
+            this.shiftrightbutton.Size = new System.Drawing.Size(75, 42);
+            this.shiftrightbutton.TabIndex = 31;
+            this.shiftrightbutton.Text = "SHIFT RIGHT";
+            this.shiftrightbutton.UseVisualStyleBackColor = true;
+            this.shiftrightbutton.Click += new System.EventHandler(this.shiftrightbutton_Click);
+            // 
+            // shiftleftbutton
+            // 
+            this.shiftleftbutton.Location = new System.Drawing.Point(69, 183);
+            this.shiftleftbutton.Name = "shiftleftbutton";
+            this.shiftleftbutton.Size = new System.Drawing.Size(75, 50);
+            this.shiftleftbutton.TabIndex = 32;
+            this.shiftleftbutton.Text = "SHIFT LEFT";
+            this.shiftleftbutton.UseVisualStyleBackColor = true;
+            this.shiftleftbutton.Click += new System.EventHandler(this.shiftleftbutton_Click);
+            // 
+            // resetbutton
+            // 
+            this.resetbutton.Location = new System.Drawing.Point(69, 239);
+            this.resetbutton.Name = "resetbutton";
+            this.resetbutton.Size = new System.Drawing.Size(75, 23);
+            this.resetbutton.TabIndex = 33;
+            this.resetbutton.Text = "RESET";
+            this.resetbutton.UseVisualStyleBackColor = true;
+            this.resetbutton.Click += new System.EventHandler(this.resetbutton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1171, 549);
+            this.Controls.Add(this.resetbutton);
+            this.Controls.Add(this.shiftleftbutton);
+            this.Controls.Add(this.shiftrightbutton);
             this.Controls.Add(this.clearbutton);
             this.Controls.Add(this.bi8);
             this.Controls.Add(this.bi7);
@@ -476,6 +512,9 @@
         private System.Windows.Forms.TextBox bi2;
         private System.Windows.Forms.TextBox bi5;
         private System.Windows.Forms.Button clearbutton;
+        private System.Windows.Forms.Button shiftrightbutton;
+        private System.Windows.Forms.Button shiftleftbutton;
+        private System.Windows.Forms.Button resetbutton;
     }
 }
 

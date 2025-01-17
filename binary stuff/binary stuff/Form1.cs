@@ -32,71 +32,7 @@ namespace binary_stuff
 
 
 
-            if (bit1.Text == "1")
-            {
-                bits[0] = 1;
-            }
-            else
-            {
-                bits[0] = 0;
-            }
-            if (bit2.Text == "1")
-            {
-                bits[1] = 2;
-            }
-            else
-            {
-                bits[1] = 0;
-            }
-            if (bit3.Text == "1")
-            {
-                bits[2] = 4;
-            }
-            else
-            {
-                bits[2] = 0;
-            }
-            if (bit4.Text == "1")
-            {
-                bits[3] = 8;
-            }
-            else
-            {
-                bits[3] = 0;
-            }
-            if (bit5.Text == "1")
-            {
-                bits[4] = 16;
-            }
-            else
-            {
-                bits[4] = 0;
-            }
-            if (bit6.Text == "1")
-            {
-                bits[5] = 32;
-            }
-            else
-            {
-                bits[5] = 0;
-            }
-            if (bit7.Text == "1")
-            {
-                bits[6] = 64;
-            }
-            else
-            {
-                bits[6] = 0;
-            }
-            if (bit8.Text == "1")
-            {
-                bits[7] = 128;
-            }
-            else
-            {
-                bits[7] = 0;
-            }
-            firstcalc();
+         
         }
         private void firstcalc()
         {
@@ -138,71 +74,7 @@ namespace binary_stuff
 
         private void b8_TextChanged(object sender, EventArgs e)
         {
-            if (b1.Text == "1")
-            {
-                bits2[0] = 1;
-            }
-            else
-            {
-                bits2[0] = 0;
-            }
-            if (b2.Text == "1")
-            {
-                bits2[1] = 2;
-            }
-            else
-            {
-                bits2[1] = 0;
-            }
-            if (b3.Text == "1")
-            {
-                bits2[2] = 4;
-            }
-            else
-            {
-                bits2[2] = 0;
-            }
-            if (b4.Text == "1")
-            {
-                bits2[3] = 8;
-            }
-            else
-            {
-                bits2[3] = 0;
-            }
-            if (b5.Text == "1")
-            {
-                bits2[4] = 16;
-            }
-            else
-            {
-                bits2[4] = 0;
-            }
-            if (b6.Text == "1")
-            {
-                bits2[5] = 32;
-            }
-            else
-            {
-                bits2[5] = 0;
-            }
-            if (b7.Text == "1")
-            {
-                bits2[6] = 64;
-            }
-            else
-            {
-                bits2[6] = 0;
-            }
-            if (b8.Text == "1")
-            {
-                bits2[7] = 128;
-            }
-            else
-            {
-                bits2[7] = 0;
-            }
-            secondcalc();
+
         }
         private void secondcalc()
         {
@@ -244,203 +116,332 @@ namespace binary_stuff
 
         private void bit1_MouseDown(object sender, MouseEventArgs e)
         {
+            if (((TextBox)sender).Text == "1")
+            {
+                ((TextBox)sender).Text = "0";
+            }
+            else 
+             ((TextBox)sender).Text = "1";
+
             if (bit1.Text == "1")
             {
-                bit1.Text = "0";
+                bits[0] = 1; 
             }
             else
             {
-                bit1.Text = "1";
+                bits[0] = 0;
             }
+           firstcalc();
         }
 
         private void bit2_MouseDown(object sender, MouseEventArgs e)
         {
+            if (((TextBox)sender).Text == "1")
+            {
+                ((TextBox)sender).Text = "0";
+            }
+            else
+                ((TextBox)sender).Text = "1";
             if (bit2.Text == "1")
             {
-                bit2.Text = "0";
+                bits[1] = 1;
             }
             else
             {
-                bit2.Text = "1";
+                bits[1] = 0;
             }
+            firstcalc();
         }
 
         private void bit3_MouseDown(object sender, MouseEventArgs e)
         {
+            if (((TextBox)sender).Text == "1")
+            {
+                ((TextBox)sender).Text = "0";
+            }
+            else
+                ((TextBox)sender).Text = "1";
+
             if (bit3.Text == "1")
             {
-                bit3.Text = "0";
+                bits[2] = 1;
             }
             else
             {
-                bit3.Text = "1";
+                bits[2] = 0;
             }
+            firstcalc();
         }
 
         private void bit4_MouseDown(object sender, MouseEventArgs e)
         {
+
+            if (((TextBox)sender).Text == "1")
+            {
+                ((TextBox)sender).Text = "0";
+            }
+            else
+                ((TextBox)sender).Text = "1"; 
             if (bit4.Text == "1")
             {
-                bit4.Text = "0";
+                bits[3] = 1;
             }
             else
             {
-                bit4.Text = "1";
+                bits[3] = 0;
             }
+            firstcalc();
         }
 
         private void bit5_MouseDown(object sender, MouseEventArgs e)
         {
+
+            if (((TextBox)sender).Text == "1")
+            {
+                ((TextBox)sender).Text = "0";
+            }
+            else
+                ((TextBox)sender).Text = "1"; 
+            
             if (bit5.Text == "1")
             {
-                bit5.Text = "0";
+                bits[4] = 1;
             }
             else
             {
-                bit5.Text = "1";
+                bits[4] = 0;
             }
+            firstcalc();
         }
 
         private void bit6_MouseDown(object sender, MouseEventArgs e)
         {
+            if (((TextBox)sender).Text == "1")
+            {
+                ((TextBox)sender).Text = "0";
+            }
+            else
+                ((TextBox)sender).Text = "1";
+            
             if (bit6.Text == "1")
             {
-                bit6.Text = "0";
+                bits[5] = 1;
             }
             else
             {
-                bit6.Text = "1";
+                bits[5] = 0;
             }
+            firstcalc();
         }
 
         private void bit7_MouseDown(object sender, MouseEventArgs e)
         {
+            if (((TextBox)sender).Text == "1")
+            {
+                ((TextBox)sender).Text = "0";
+            }
+            else
+                ((TextBox)sender).Text = "1";
+            
             if (bit7.Text == "1")
             {
-                bit7.Text = "0";
+                bits[6] = 1;
             }
             else
             {
-                bit7.Text = "1";
+                bits[6] = 0;
             }
+            firstcalc();
         }
 
         private void bit8_MouseDown(object sender, MouseEventArgs e)
         {
+            if (((TextBox)sender).Text == "1")
+            {
+                ((TextBox)sender).Text = "0";
+            }
+            else
+                ((TextBox)sender).Text = "1"; 
+            
             if (bit8.Text == "1")
             {
-                bit8.Text = "0";
+                bits[7] = 1;
             }
             else
             {
-                bit8.Text = "1";
+                bits[7] = 0;
             }
+            firstcalc();
         }
 
         private void b1_MouseDown(object sender, MouseEventArgs e)
         {
+            if (((TextBox)sender).Text == "1")
+            {
+                ((TextBox)sender).Text = "0";
+            }
+            else
+                ((TextBox)sender).Text = "1";
+            
             if (b1.Text == "1")
             {
-                b1.Text = "0";
+                bits2[0] = 1;
             }
             else
             {
-                b1.Text = "1";
+                bits2[0] = 0;
             }
-        }
+            secondcalc();
+        }  
 
         private void b2_MouseDown(object sender, MouseEventArgs e)
         {
+            if (((TextBox)sender).Text == "1")
+            {
+                ((TextBox)sender).Text = "0";
+            }
+            else
+                ((TextBox)sender).Text = "1";
+
             if (b2.Text == "1")
             {
-                b2.Text = "0";
+                bits2[1] = 1;
             }
             else
             {
-                b2.Text = "1";
+                bits2[1] = 0;
             }
+            secondcalc();
         }
 
         private void b3_MouseDown(object sender, MouseEventArgs e)
         {
+            if (((TextBox)sender).Text == "1")
+            {
+                ((TextBox)sender).Text = "0";
+            }
+            else
+                ((TextBox)sender).Text = "1";
+            
             if (b3.Text == "1")
             {
-                b3.Text = "0";
+                bits2[2] = 1;
             }
             else
             {
-                b3.Text = "1";
+                bits2[2] = 0;
             }
+            secondcalc();
         }
 
         private void b4_MouseDown(object sender, MouseEventArgs e)
         {
+            if (((TextBox)sender).Text == "1")
+            {
+                ((TextBox)sender).Text = "0";
+            }
+            else
+                ((TextBox)sender).Text = "1";
+            
             if (b4.Text == "1")
             {
-                b4.Text = "0";
+                bits2[3] = 1;
             }
             else
             {
-                b4.Text = "1";
+                bits2[3] = 0;
             }
+            secondcalc();
         }
 
         private void b5_MouseDown(object sender, MouseEventArgs e)
         {
+            if (((TextBox)sender).Text == "1")
+            {
+                ((TextBox)sender).Text = "0";
+            }
+            else
+                ((TextBox)sender).Text = "1";
+            
             if (b5.Text == "1")
             {
-                b5.Text = "0";
+                bits2[4] = 1;
             }
             else
             {
-                b5.Text = "1";
+                bits2[4] = 0;
             }
+            secondcalc();
         }
 
         private void b6_MouseDown(object sender, MouseEventArgs e)
         {
+            if (((TextBox)sender).Text == "1")
+            {
+                ((TextBox)sender).Text = "0";
+            }
+            else
+                ((TextBox)sender).Text = "1";
+            
             if (b6.Text == "1")
             {
-                b6.Text = "0";
+                bits2[5] = 1;
             }
             else
             {
-                b6.Text = "1";
+                bits2[0] = 0;
             }
+            secondcalc();
         }
 
         private void b7_MouseDown(object sender, MouseEventArgs e)
         {
+            if (((TextBox)sender).Text == "1")
+            {
+                ((TextBox)sender).Text = "0";
+            }
+            else
+                ((TextBox)sender).Text = "1"; 
+            
             if (b7.Text == "1")
             {
-                b7.Text = "0";
+                bits2[6] = 1;   
             }
             else
             {
-                b7.Text = "1";
+                bits2[6] = 0;
             }
+            secondcalc();
         }
 
         private void b8_MouseDown(object sender, MouseEventArgs e)
         {
+            if (((TextBox)sender).Text == "1")
+            {
+                ((TextBox)sender).Text = "0";
+            }
+            else
+                ((TextBox)sender).Text = "1"; 
+            
             if (b8.Text == "1")
             {
-                b8.Text = "0";
+                bits2[7] = 1;
             }
             else
             {
-                b8.Text = "1";
+                bits2[7] = 0;
             }
+            secondcalc();
         }
 
         private void clearbutton_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < bits.Length; i++)
             {
                 bits[i] = 0;
             }
             update();
+
         }
         private void update()
         {
@@ -452,6 +453,7 @@ namespace binary_stuff
             bit6.Text = (bits[0] == 1 ? "1" : "0");
             bit7.Text = (bits[0] == 1 ? "1" : "0");
             bit8.Text = (bits[0] == 1 ? "1" : "0");
+           // answertb.Text = total1.ToString();
 
             b1.Text = (bits[0] == 1 ? "1" : "0");
             b2.Text = (bits[0] == 1 ? "1" : "0");
@@ -461,6 +463,51 @@ namespace binary_stuff
             b6.Text = (bits[0] == 1 ? "1" : "0");
             b7.Text = (bits[0] == 1 ? "1" : "0");
             b8.Text = (bits[0] == 1 ? "1" : "0");
+          //  answertb.Text = total2.ToString();
+
+            bi1.Text = (bits[0] == 1 ? "1" : "0");
+            bi2.Text = (bits[0] == 1 ? "1" : "0");
+            bi3.Text = (bits[0] == 1 ? "1" : "0");
+            bi4.Text = (bits[0] == 1 ? "1" : "0");
+            bi5.Text = (bits[0] == 1 ? "1" : "0");
+            bi6.Text = (bits[0] == 1 ? "1" : "0");
+            bi7.Text = (bits[0] == 1 ? "1" : "0");
+            bi8.Text = (bits[0] == 1 ? "1" : "0");
+        }
+
+        private void shiftrightbutton_Click(object sender, EventArgs e)
+        {
+            bit1.Text = bit2.Text;
+            bit2.Text = bit3.Text;
+            bit3.Text = bit4.Text;
+            bit4.Text = bit5.Text;
+            bit5.Text = bit6.Text;
+            bit6.Text = bit7.Text;
+            bit7.Text = bit8.Text;
+            bit8.Text = bit1.Text;
+        }
+
+        private void shiftleftbutton_Click(object sender, EventArgs e)
+        {
+            bit1.Text = bit8.Text;
+            bit2.Text = bit1.Text;
+            bit3.Text = bit2.Text;
+            bit4.Text = bit3.Text;
+            bit5.Text = bit4.Text;
+            bit6.Text = bit5.Text;
+            bit7.Text = bit6.Text;
+            bit8.Text = bit7.Text;
+            
+
+        }
+
+        private void resetbutton_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < bits.Length; i++)
+            {
+                bits[i] = 0;
+            }
+            update();
         }
     }
 }
