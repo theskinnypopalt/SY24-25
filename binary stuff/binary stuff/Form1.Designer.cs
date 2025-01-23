@@ -51,7 +51,7 @@
             this.bi8 = new System.Windows.Forms.TextBox();
             this.bi7 = new System.Windows.Forms.TextBox();
             this.bi6 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.answer3tb = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.bi4 = new System.Windows.Forms.TextBox();
             this.bi1 = new System.Windows.Forms.TextBox();
@@ -62,6 +62,10 @@
             this.shiftrightbutton = new System.Windows.Forms.Button();
             this.shiftleftbutton = new System.Windows.Forms.Button();
             this.resetbutton = new System.Windows.Forms.Button();
+            this.andbutton = new System.Windows.Forms.Button();
+            this.orbutton = new System.Windows.Forms.Button();
+            this.xorbutton = new System.Windows.Forms.Button();
+            this.addbutton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // bit5
@@ -73,8 +77,7 @@
             this.bit5.Size = new System.Drawing.Size(69, 61);
             this.bit5.TabIndex = 0;
             this.bit5.Text = "0";
-            this.bit5.TextChanged += new System.EventHandler(this.bit8_TextChanged);
-            this.bit5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bit5_MouseDown);
+            this.bit5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bit8_MouseDown_1);
             // 
             // bit2
             // 
@@ -85,8 +88,7 @@
             this.bit2.Size = new System.Drawing.Size(69, 61);
             this.bit2.TabIndex = 1;
             this.bit2.Text = "0";
-            this.bit2.TextChanged += new System.EventHandler(this.bit8_TextChanged);
-            this.bit2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bit2_MouseDown);
+            this.bit2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bit8_MouseDown_1);
             // 
             // bit3
             // 
@@ -97,8 +99,7 @@
             this.bit3.Size = new System.Drawing.Size(69, 61);
             this.bit3.TabIndex = 2;
             this.bit3.Text = "0";
-            this.bit3.TextChanged += new System.EventHandler(this.bit8_TextChanged);
-            this.bit3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bit3_MouseDown);
+            this.bit3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bit8_MouseDown_1);
             // 
             // bit1
             // 
@@ -109,8 +110,7 @@
             this.bit1.Size = new System.Drawing.Size(69, 61);
             this.bit1.TabIndex = 3;
             this.bit1.Text = "0";
-            this.bit1.TextChanged += new System.EventHandler(this.bit8_TextChanged);
-            this.bit1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bit1_MouseDown);
+            this.bit1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bit8_MouseDown_1);
             // 
             // bit4
             // 
@@ -121,8 +121,7 @@
             this.bit4.Size = new System.Drawing.Size(69, 61);
             this.bit4.TabIndex = 4;
             this.bit4.Text = "0";
-            this.bit4.TextChanged += new System.EventHandler(this.bit8_TextChanged);
-            this.bit4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bit4_MouseDown);
+            this.bit4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bit8_MouseDown_1);
             // 
             // label1
             // 
@@ -140,8 +139,9 @@
             this.answertb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.answertb.Location = new System.Drawing.Point(940, 105);
             this.answertb.Name = "answertb";
-            this.answertb.Size = new System.Drawing.Size(0, 25);
+            this.answertb.Size = new System.Drawing.Size(23, 25);
             this.answertb.TabIndex = 6;
+            this.answertb.Text = "0";
             // 
             // bit6
             // 
@@ -152,8 +152,7 @@
             this.bit6.Size = new System.Drawing.Size(69, 61);
             this.bit6.TabIndex = 7;
             this.bit6.Text = "0";
-            this.bit6.TextChanged += new System.EventHandler(this.bit8_TextChanged);
-            this.bit6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bit6_MouseDown);
+            this.bit6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bit8_MouseDown_1);
             // 
             // bit7
             // 
@@ -164,8 +163,7 @@
             this.bit7.Size = new System.Drawing.Size(69, 61);
             this.bit7.TabIndex = 8;
             this.bit7.Text = "0";
-            this.bit7.TextChanged += new System.EventHandler(this.bit8_TextChanged);
-            this.bit7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bit7_MouseDown);
+            this.bit7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bit8_MouseDown_1);
             // 
             // bit8
             // 
@@ -176,8 +174,7 @@
             this.bit8.Size = new System.Drawing.Size(69, 61);
             this.bit8.TabIndex = 9;
             this.bit8.Text = "0";
-            this.bit8.TextChanged += new System.EventHandler(this.bit8_TextChanged);
-            this.bit8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bit8_MouseDown);
+            this.bit8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bit8_MouseDown_1);
             // 
             // b8
             // 
@@ -189,7 +186,7 @@
             this.b8.TabIndex = 19;
             this.b8.Text = "0";
             this.b8.TextChanged += new System.EventHandler(this.b8_TextChanged);
-            this.b8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.b8_MouseDown);
+            this.b8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.b8_MouseDown_1);
             // 
             // b7
             // 
@@ -201,7 +198,7 @@
             this.b7.TabIndex = 18;
             this.b7.Text = "0";
             this.b7.TextChanged += new System.EventHandler(this.b8_TextChanged);
-            this.b7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.b7_MouseDown);
+            this.b7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.b8_MouseDown_1);
             // 
             // b6
             // 
@@ -213,7 +210,7 @@
             this.b6.TabIndex = 17;
             this.b6.Text = "0";
             this.b6.TextChanged += new System.EventHandler(this.b8_TextChanged);
-            this.b6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.b6_MouseDown);
+            this.b6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.b8_MouseDown_1);
             // 
             // total2tb
             // 
@@ -221,8 +218,9 @@
             this.total2tb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.total2tb.Location = new System.Drawing.Point(940, 172);
             this.total2tb.Name = "total2tb";
-            this.total2tb.Size = new System.Drawing.Size(0, 25);
+            this.total2tb.Size = new System.Drawing.Size(23, 25);
             this.total2tb.TabIndex = 16;
+            this.total2tb.Text = "0";
             // 
             // label3
             // 
@@ -244,7 +242,7 @@
             this.b4.TabIndex = 14;
             this.b4.Text = "0";
             this.b4.TextChanged += new System.EventHandler(this.b8_TextChanged);
-            this.b4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.b4_MouseDown);
+            this.b4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.b8_MouseDown_1);
             // 
             // b1
             // 
@@ -256,7 +254,7 @@
             this.b1.TabIndex = 13;
             this.b1.Text = "0";
             this.b1.TextChanged += new System.EventHandler(this.b8_TextChanged);
-            this.b1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.b1_MouseDown);
+            this.b1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.b8_MouseDown_1);
             // 
             // b3
             // 
@@ -268,7 +266,7 @@
             this.b3.TabIndex = 12;
             this.b3.Text = "0";
             this.b3.TextChanged += new System.EventHandler(this.b8_TextChanged);
-            this.b3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.b3_MouseDown);
+            this.b3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.b8_MouseDown_1);
             // 
             // b2
             // 
@@ -280,7 +278,7 @@
             this.b2.TabIndex = 11;
             this.b2.Text = "0";
             this.b2.TextChanged += new System.EventHandler(this.b8_TextChanged);
-            this.b2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.b2_MouseDown);
+            this.b2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.b8_MouseDown_1);
             // 
             // b5
             // 
@@ -292,7 +290,7 @@
             this.b5.TabIndex = 10;
             this.b5.Text = "0";
             this.b5.TextChanged += new System.EventHandler(this.b8_TextChanged);
-            this.b5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.b5_MouseDown);
+            this.b5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.b8_MouseDown_1);
             // 
             // bi8
             // 
@@ -324,14 +322,15 @@
             this.bi6.TabIndex = 27;
             this.bi6.Text = "0";
             // 
-            // label2
+            // answer3tb
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(940, 392);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 25);
-            this.label2.TabIndex = 26;
+            this.answer3tb.AutoSize = true;
+            this.answer3tb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.answer3tb.Location = new System.Drawing.Point(940, 392);
+            this.answer3tb.Name = "answer3tb";
+            this.answer3tb.Size = new System.Drawing.Size(23, 25);
+            this.answer3tb.TabIndex = 26;
+            this.answer3tb.Text = "0";
             // 
             // label4
             // 
@@ -433,11 +432,53 @@
             this.resetbutton.UseVisualStyleBackColor = true;
             this.resetbutton.Click += new System.EventHandler(this.resetbutton_Click);
             // 
+            // andbutton
+            // 
+            this.andbutton.Location = new System.Drawing.Point(69, 268);
+            this.andbutton.Name = "andbutton";
+            this.andbutton.Size = new System.Drawing.Size(75, 23);
+            this.andbutton.TabIndex = 34;
+            this.andbutton.Text = "AND";
+            this.andbutton.UseVisualStyleBackColor = true;
+            this.andbutton.Click += new System.EventHandler(this.andbutton_Click);
+            // 
+            // orbutton
+            // 
+            this.orbutton.Location = new System.Drawing.Point(69, 297);
+            this.orbutton.Name = "orbutton";
+            this.orbutton.Size = new System.Drawing.Size(75, 23);
+            this.orbutton.TabIndex = 35;
+            this.orbutton.Text = "OR";
+            this.orbutton.UseVisualStyleBackColor = true;
+            // 
+            // xorbutton
+            // 
+            this.xorbutton.Location = new System.Drawing.Point(69, 326);
+            this.xorbutton.Name = "xorbutton";
+            this.xorbutton.Size = new System.Drawing.Size(75, 23);
+            this.xorbutton.TabIndex = 36;
+            this.xorbutton.Text = "XOR";
+            this.xorbutton.UseVisualStyleBackColor = true;
+            // 
+            // addbutton
+            // 
+            this.addbutton.Location = new System.Drawing.Point(69, 355);
+            this.addbutton.Name = "addbutton";
+            this.addbutton.Size = new System.Drawing.Size(75, 23);
+            this.addbutton.TabIndex = 37;
+            this.addbutton.Text = "ADD";
+            this.addbutton.UseVisualStyleBackColor = true;
+            this.addbutton.Click += new System.EventHandler(this.addbutton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1171, 549);
+            this.Controls.Add(this.addbutton);
+            this.Controls.Add(this.xorbutton);
+            this.Controls.Add(this.orbutton);
+            this.Controls.Add(this.andbutton);
             this.Controls.Add(this.resetbutton);
             this.Controls.Add(this.shiftleftbutton);
             this.Controls.Add(this.shiftrightbutton);
@@ -445,7 +486,7 @@
             this.Controls.Add(this.bi8);
             this.Controls.Add(this.bi7);
             this.Controls.Add(this.bi6);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.answer3tb);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.bi4);
             this.Controls.Add(this.bi1);
@@ -474,6 +515,7 @@
             this.Controls.Add(this.bit5);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -504,7 +546,7 @@
         private System.Windows.Forms.TextBox bi8;
         private System.Windows.Forms.TextBox bi7;
         private System.Windows.Forms.TextBox bi6;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label answer3tb;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox bi4;
         private System.Windows.Forms.TextBox bi1;
@@ -515,6 +557,10 @@
         private System.Windows.Forms.Button shiftrightbutton;
         private System.Windows.Forms.Button shiftleftbutton;
         private System.Windows.Forms.Button resetbutton;
+        private System.Windows.Forms.Button andbutton;
+        private System.Windows.Forms.Button orbutton;
+        private System.Windows.Forms.Button xorbutton;
+        private System.Windows.Forms.Button addbutton;
     }
 }
 
