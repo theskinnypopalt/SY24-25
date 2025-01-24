@@ -450,6 +450,7 @@
             this.orbutton.TabIndex = 35;
             this.orbutton.Text = "OR";
             this.orbutton.UseVisualStyleBackColor = true;
+            this.orbutton.Click += new System.EventHandler(this.orbutton_Click);
             // 
             // xorbutton
             // 
@@ -515,7 +516,7 @@
             this.Controls.Add(this.bit5);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+//            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

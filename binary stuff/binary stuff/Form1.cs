@@ -174,13 +174,21 @@ namespace binary_stuff
 
         private void andbutton_Click(object sender, EventArgs e)
         {
-
+            for (int i = 0; i < bits.Length; i++)
+            {
+                if (bits[i] != 0 & bits2[i] != 0)
+                {
+                    bits3[i] = 1;
+                }
+                else if (bits[i] != 0 & bits2[i] == 0 || bits[i] == 0 & bits2[i] != 0 || bits[i] == 0 & bits2[i] == 0)
+                {
+                    bits3[i] = 0;
+                }
+            }
+            update();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void bit8_MouseDown_1(object sender, MouseEventArgs e)
         {
@@ -264,105 +272,105 @@ namespace binary_stuff
 
         private void addbutton_Click(object sender, EventArgs e)
         {
-            if (bits[0] == 1 & bits2[0] == 1)
+            if (bits[0] == 1 & bits2[0] == 1 )
             {
                 bits3[0] = 0;
-                carrybit1[1] = 1;
+                carrybit1[0] = 1;
             }
             else if (bits[0] == 0 & bits2[0] == 0 || bits[0] == 0 & bits2[0] == 1 || bits[0] == 1 & bits2[0] == 0)
             {
                 bits3[0] = 1;
-                carrybit1[1] = 0;
+                carrybit1[0] = 0;
             }
             if (bits[1] == 1 & bits2[1] == 1 & carrybit1[1] == 0 || bits[1] == 1 & bits2[1] == 0 & carrybit1[1] == 1 ||
                 bits[1] == 0 & bits2[1] == 1 & carrybit1[1] == 1)
             {
                 bits3[1] = 0;
-                carrybit1[2] = 1;
+                carrybit1[1] = 1;
             }
             else if (bits[1] == 0 & bits2[1] == 1 && carrybit1[1] == 0 || bits[1] == 0 & bits2[1] == 0 & carrybit1[1] == 1 ||
                 bits[1] == 1 & bits2[1] == 0 & carrybit1[1] == 0)
             {
                 bits3[1] = 1;
-                carrybit1[2] = 0;
+                carrybit1[1] = 0;
             }
             //
             if (bits[2] == 1 & bits2[2] == 1 & carrybit1[2] == 0 || bits[2] == 1 & bits2[2] == 0 & carrybit1[2] == 1 ||
                 bits[2] == 0 & bits2[2] == 1 & carrybit1[2] == 1)
             {
                 bits3[2] = 0;
-                carrybit1[3] = 1;
+                carrybit1[2] = 1;
             }
             else if (bits[2] == 0 & bits2[2] == 1 && carrybit1[2] == 0 || bits[2] == 0 & bits2[2] == 0 & carrybit1[2] == 1 ||
                 bits[2] == 1 & bits2[2] == 0 & carrybit1[2] == 0)
             {
                 bits3[2] = 1;
-                carrybit1[3] = 0;
+                carrybit1[2] = 0;
             }
             //
             if (bits[3] == 1 & bits2[3] == 1 & carrybit1[3] == 0 || bits[3] == 1 & bits2[3] == 0 & carrybit1[3] == 1 ||
                 bits[3] == 0 & bits2[3] == 1 & carrybit1[3] == 1)
             {
                 bits3[3] = 0;
-                carrybit1[4] = 1;
+                carrybit1[3] = 1;
             }
             else if (bits[3] == 0 & bits2[3] == 1 && carrybit1[3] == 0 || bits[3] == 0 & bits2[3] == 0 & carrybit1[3] == 1 ||
                 bits[3] == 1 & bits2[3] == 0 & carrybit1[3] == 0)
             {
                 bits3[3] = 1;
-                carrybit1[4] = 0;
+                carrybit1[3] = 0;
             }
             //
             if (bits[4] == 1 & bits2[4] == 1 & carrybit1[4] == 0 || bits[4] == 1 & bits2[4] == 0 & carrybit1[4] == 1 ||
                 bits[4] == 0 & bits2[4] == 1 & carrybit1[4] == 1)
             {
                 bits3[4] = 0;
-                carrybit1[5] = 1;
+                carrybit1[4] = 1;
             }
             else if (bits[4] == 0 & bits2[4] == 1 && carrybit1[4] == 0 || bits[4] == 0 & bits2[4] == 0 & carrybit1[4] == 1 ||
                 bits[4] == 1 & bits2[4] == 0 & carrybit1[4] == 0)
             {
                 bits3[4] = 1;
-                carrybit1[5] = 0;
+                carrybit1[4] = 0;
             }
             //
             if (bits[5] == 1 & bits2[5] == 1 & carrybit1[5] == 0 || bits[5] == 1 & bits2[5] == 0 & carrybit1[5] == 1 ||
                 bits[5] == 0 & bits2[5] == 1 & carrybit1[5] == 1)
             {
                 bits3[5] = 0;
-                carrybit1[6] = 1;
+                carrybit1[5] = 1;
             }
             else if (bits[5] == 0 & bits2[5] == 1 && carrybit1[5] == 0 || bits[5] == 0 & bits2[5] == 0 & carrybit1[5] == 1 ||
                 bits[5] == 1 & bits2[5] == 0 & carrybit1[5] == 0)
             {
                 bits3[5] = 1;
-                carrybit1[6] = 0;
+                carrybit1[5] = 0;
             }
             //
             if (bits[6] == 1 & bits2[6] == 1 & carrybit1[6] == 0 || bits[6] == 1 & bits2[6] == 0 & carrybit1[6] == 1 ||
                 bits[6] == 0 & bits2[6] == 1 & carrybit1[6] == 1)
             {
                 bits3[6] = 0;
-                carrybit1[7] = 1;
+                carrybit1[6] = 1;
             }
             else if (bits[6] == 0 & bits2[6] == 1 && carrybit1[6] == 0 || bits[6] == 0 & bits2[6] == 0 & carrybit1[6] == 1 ||
                 bits[6] == 1 & bits2[6] == 0 & carrybit1[6] == 0)
             {
                 bits3[6] = 1;
-                carrybit1[7] = 0;
+                carrybit1[6] = 0;
             }
             //
             if (bits[7] == 1 & bits2[7] == 1 & carrybit1[7] == 0 || bits[7] == 1 & bits2[7] == 0 & carrybit1[7] == 1 ||
                 bits[7] == 0 & bits2[7] == 1 & carrybit1[7] == 1)
             {
                 bits3[7] = 0;
-                carrybit1[8] = 1;
+                carrybit1[7] = 1;
             }
             else if (bits[7] == 0 & bits2[7] == 1 && carrybit1[7] == 0 || bits[7] == 0 & bits2[7] == 0 & carrybit1[7] == 1 ||
                 bits[7] == 1 & bits2[7] == 0 & carrybit1[7] == 0)
             {
                 bits3[7] = 1;
-                carrybit1[8] = 0;
+                carrybit1[7] = 0;
             }
 
 
@@ -446,6 +454,22 @@ namespace binary_stuff
             else
             {
                 bits2[7] = 0;
+            }
+            update();
+        }
+
+        private void orbutton_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < bits.Length; i++)
+            {
+                if (bits[i] != 0 & bits2[i] != 0 || bits[i] != 0 & bits2[i] == 0 || bits[i] == 0 & bits2[i] != 0)
+                {
+                    bits3[i] = 1;
+                }
+                else if (bits[i] == 0 & bits2[i] == 0)
+                {
+                    bits3[i] = 0;
+                }
             }
             update();
         }
