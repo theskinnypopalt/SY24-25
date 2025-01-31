@@ -153,7 +153,7 @@ namespace binary_stuff
 
         private void shiftleftbutton_Click(object sender, EventArgs e)
         {
-            for (int i = 1; i < bits.Length; i++)
+            for (int i = 1; i < bits.Length - 1; i++)
             {
                 bits[i + 1] = bits[i];
             }
@@ -169,6 +169,7 @@ namespace binary_stuff
             {
                 bits[i] = 0;
             }
+
             update();
         }
 
@@ -272,7 +273,8 @@ namespace binary_stuff
 
         private void addbutton_Click(object sender, EventArgs e)
         {
-            if (bits[0] == 1 & bits2[0] == 1 )
+            
+            if (bits[0] == 1 & bits2[0] == 1)
             {
                 bits3[0] = 0;
                 carrybit1[0] = 1;
@@ -467,6 +469,22 @@ namespace binary_stuff
                     bits3[i] = 1;
                 }
                 else if (bits[i] == 0 & bits2[i] == 0)
+                {
+                    bits3[i] = 0;
+                }
+            }
+            update();
+        }
+
+        private void xorbutton_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < bits.Length; ++i)
+            {
+                if (bits[i] != 0 & bits2[i] == 0 || bits[i] == 0 & bits2[i] != 0)
+                {
+                    bits3[1] = 1;
+                }
+                else if (bits[i] != 0 & bits2[i] != 0 || bits[i] == 0 & bits2[i] == 0)
                 {
                     bits3[i] = 0;
                 }

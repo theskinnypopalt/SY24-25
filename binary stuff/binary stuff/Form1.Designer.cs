@@ -460,6 +460,7 @@
             this.xorbutton.TabIndex = 36;
             this.xorbutton.Text = "XOR";
             this.xorbutton.UseVisualStyleBackColor = true;
+            this.xorbutton.Click += new System.EventHandler(this.xorbutton_Click);
             // 
             // addbutton
             // 
@@ -516,7 +517,6 @@
             this.Controls.Add(this.bit5);
             this.Name = "Form1";
             this.Text = "Form1";
-//            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
