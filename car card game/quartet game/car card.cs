@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace car_card_game
 {
-    public class car_card
+    internal class car_card
     {
-      
-       public string id {  get; set; }
+
+        public string id { get; set; }
         public string name {  get; set; }
         public int maxSpeed { get; set; }
         public double zerotosixty { get; set; }
@@ -25,7 +25,7 @@ namespace car_card_game
 
         public car_card(string id, string name, int maxSpeed, double zerotosixty, int horsepower, int cubiccentimeters, int cylinders, int rpm)
         {
-            this.id = id.ToUpper();   
+           this.id = id.ToUpper();
             this.name = name;
             this.maxSpeed = maxSpeed;
             this.zerotosixty = zerotosixty;
